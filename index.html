@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu">
+    
+    <style>
+      body {
+        background-color: #3f3f3f;
+        text-align: center;
+        font-family: "Ubuntu", sans-serif;
+      }
+      h1, h2, p{
+        color: white;
+      }
+      #shadow {
+        box-shadow: 5px 5px #F0F0F0;
+      }
+      p {
+        font-size: 22px;
+      }
+      #help {
+        text-decoration: underline;
+      }
+      canvas {
+        z-index: -1;
+      }
+      a {
+        color: white;
+      }
+      a:hover {
+        color: #8FD8D8;
+      }
+      a:active {
+        color: #388E8E;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Matter Monday</h1>
+    <h2>The Element Antimony!</h2>
+    <img id="shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Antimony-4.jpg/220px-Antimony-4.jpg" width="200" height="200" alt="A picture of the element Antimony" onclick="showInfo()">
+    
+    <p>The element Antimony is a lustrous gray metalloid with the atomic number 51 and the symbol Sb.<br /> Antimony is found in nature mainly as the sulfide mineral stibnite and has been used in medicines and cosmetics<br /> all the way back to egypt as "Kohl".</p>
+    
+    <p id="help">Click the image for more info!</p>
+    
+    <p id="info">The largest applications for metallic antimony is an alloy with lead and tin and the lead antimony plates in lead–acid batteries. Alloys of lead and tin with antimony have improved properties for solders, bullets, and plain bearings. Antimony compounds are prominent additives for chlorine and bromine-containing fire retardants found in many commercial and domestic products. An emerging application is the use of antimony in microelectronics.
+    </p>
+    
+    <hr>
+    
+    <footer>
+      <p>Information from <a href="https://www.ptable.com/">Ptable</a></p>
+      <p>Webpage by Jayden Wyatt!</p>
+    </footer>
+    
+    <script>
+      document.getElementById("info").style.display = "none";
+       document.getElementById("help").style.display = "block";
+      
+      function showInfo() {
+        document.getElementById("info").style.display = "block";
+         document.getElementById("help").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
