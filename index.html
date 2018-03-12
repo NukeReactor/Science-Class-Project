@@ -32,16 +32,37 @@
       a:active {
         color: #388E8E;
       }
+      img {
+        border-radius: 20px;
+      }
+      button {
+        border: none;
+        background-color: #ff0000;
+        box-shadow: 2px 7px black;
+        padding: 15px 20px;
+        font-size: 20px;
+        border-radius: 12px;
+        outline: none;
+      }
+      button:hover {
+        background-color: #cc0000;
+      }
+      button:active {
+        background-color:  #990000;
+        transform: translateY(3px);
+        box-shadow: 2px 4px black;
+      }
     </style>
   </head>
   <body>
     <h1>Matter Monday</h1>
     <h2>The Element Antimony!</h2>
-    <img id="shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Antimony-4.jpg/220px-Antimony-4.jpg" width="200" height="200" alt="A picture of the element Antimony" onclick="showInfo()">
+    <img id="shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Antimony-4.jpg/220px-Antimony-4.jpg" width="200" height="200" alt="A picture of the element Antimony">
     
     <p>The element Antimony is a lustrous gray metalloid with the atomic number 51 and the symbol Sb.<br /> Antimony is found in nature mainly as the sulfide mineral stibnite and has been used in medicines and cosmetics<br /> all the way back to egypt as "Kohl".</p>
     
-    <p id="help">Click the image for more info!</p>
+    <p id="help">Click here for more info!</p>
+    <button onclick="showInfo()" id="infoButton">Show Info</button>
     
     <p id="info">The largest applications for metallic antimony is an alloy with lead and tin and the lead antimony plates in lead–acid batteries. Alloys of lead and tin with antimony have improved properties for solders, bullets, and plain bearings. Antimony compounds are prominent additives for chlorine and bromine-containing fire retardants found in many commercial and domestic products. An emerging application is the use of antimony in microelectronics.
     </p>
@@ -55,11 +76,12 @@
     
     <script>
       document.getElementById("info").style.display = "none";
-       document.getElementById("help").style.display = "block";
+      document.getElementById("help").style.display = "block";
       
       function showInfo() {
-        document.getElementById("info").style.display = "block";
-         document.getElementById("help").style.display = "none";
+          document.getElementById("info").style.display = "block";
+          document.getElementById("help").style.display = "none";
+          document.getElementById("infoButton").style.display = "none";
       }
     </script>
   </body>
