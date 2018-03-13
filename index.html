@@ -4,7 +4,7 @@
     
     <style>
       body {
-        background-color: #3f3f3f;
+        background: linear-gradient(#3f3f3f, #5b5b5b, #3f3f3f);
         text-align: center;
         font-family: "Ubuntu", sans-serif;
       }
@@ -13,6 +13,7 @@
       }
       h1, h2 {
         text-shadow: 2px 2px black;
+        text-decoration: underline;
       }
       #shadow {
         box-shadow: 5px 5px black;
@@ -55,6 +56,10 @@
         transform: translateY(3px);
         box-shadow: 2px 4px black;
       }
+      hr {
+        padding-top: 10px;
+        background-color: white;
+      }
     </style>
   </head>
   <body>
@@ -67,24 +72,34 @@
     <p id="help">Click here for more info!</p>
     <button onclick="showInfo()" id="infoButton">Show Info</button>
     
-    <p id="info">The largest applications for metallic antimony is an alloy with lead and tin and the lead antimony plates in lead–acid batteries. Alloys of lead and tin with antimony have improved properties for solders, bullets, and plain bearings. Antimony compounds are prominent additives for chlorine and bromine-containing fire retardants found in many commercial and domestic products. An emerging application is the use of antimony in microelectronics.
+    <p id="info">The largest applications for metallic antimony is an alloy with lead and tin and the lead antimony plates in lead-acid batteries. Alloys of lead and tin with antimony have improved properties for solders, bullets, and plain bearings. Antimony compounds are prominent additives for chlorine and bromine-containing fire retardants found in many commercial and domestic products. An emerging application is the use of antimony in microelectronics.
     </p>
+    
+    <button id="hide" onclick="hideInfo()">Hide Info</button>
     
     <hr>
     
     <footer>
-      <p>Information from <a href="https://www.ptable.com/">Ptable</a></p>
+      <p>Information from <a href="https://www.ptable.com/">Ptable.com</a></p>
       <p>Webpage by Jayden Wyatt!</p>
     </footer>
     
     <script>
       document.getElementById("info").style.display = "none";
       document.getElementById("help").style.display = "block";
+      document.getElementById("hide").style.display = "none";
       
       function showInfo() {
           document.getElementById("info").style.display = "block";
           document.getElementById("help").style.display = "none";
           document.getElementById("infoButton").style.display = "none";
+          document.getElementById("hide").style.display = "inline-block";
+      }
+      
+      function hideInfo() {
+        document.getElementById("infoButton").style.display = "inline-block";
+        document.getElementById("info").style.display = "none";
+        document.getElementById("hide").style.display = "none";
       }
     </script>
   </body>
