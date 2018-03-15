@@ -65,14 +65,24 @@
     <script>
       function nameShow() {
         requestAnimationFrame(nameShow);
+        
         var name = document.getElementById("nameInput").value;
+        
         document.getElementById("nameDisp").innerHTML = "Welcome " + name;
         
+        var m = new Date();
+        var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        var dt = new Date();
+        
         var d = new Date();
-        var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        
         var hour = new Date();
         var sec = new Date();
-        document.getElementById("time").innerHTML = day[d.getDay()] + ", " + hour.getHours() + ":" + sec.getSeconds();
+        
+        document.getElementById("time").innerHTML =
+      month[m.getMonth()] + " " + dt.getDay() + ", " + day[d.getDay()] + ", " + hour.getHours() + ":" + sec.getSeconds();
       }
       
       nameShow();
