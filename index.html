@@ -2,7 +2,7 @@
   <head>
     <style>
       @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-      
+    
       body {
         background: linear-gradient(#3f3f3f, #5b5b5b, #3f3f3f);
         text-align: center;
@@ -61,15 +61,32 @@
         background-color: white;
       }
     </style>
+    
+    <script>
+      function nameShow() {
+        requestAnimationFrame(nameShow);
+        var name = document.getElementById("nameInput").value;
+        document.getElementById("nameDisp").innerHTML = "Welcome " + name;
+      }
+      
+      nameShow();
+    </script>
   </head>
   <body>
     <h1>Matter Monday</h1>
     <h2>The Element Antimony!</h2>
+    
+    <h2 id="nameDisp">Welcome</h2>
+    <p>Put your name here!</p>
+    <input type="text" id="nameInput" placeholder="Your name here!">
+    
+    <br><br>
+    
     <img id="shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Antimony-4.jpg/220px-Antimony-4.jpg" width="200" height="200" alt="A picture of the element Antimony">
     
     <p>The element Antimony is a lustrous gray metalloid with the atomic number 51 and the symbol Sb.<br /> Antimony is found in nature mainly as the sulfide mineral stibnite and has been used in medicines and cosmetics<br /> all the way back to egypt as "Kohl".</p>
     
-    <p id="help">Click here for more info!</p>
+    <p id="help">Click the button for more info!</p>
     <button onclick="showInfo()" id="infoButton">Show Info</button>
     
     <p id="info">The largest applications for metallic antimony is an alloy with lead and tin and the lead antimony plates in lead-acid batteries. Alloys of lead and tin with antimony have improved properties for solders, bullets, and plain bearings. Antimony compounds are prominent additives for chlorine and bromine-containing fire retardants found in many commercial and domestic products. An emerging application is the use of antimony in microelectronics.
