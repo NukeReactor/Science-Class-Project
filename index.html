@@ -67,6 +67,12 @@
         requestAnimationFrame(nameShow);
         var name = document.getElementById("nameInput").value;
         document.getElementById("nameDisp").innerHTML = "Welcome " + name;
+        
+        var d = new Date();
+        var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var hour = new Date();
+        var sec = new Date();
+        document.getElementById("time").innerHTML = day[d.getDay()] + ", " + hour.getHours() + ":" + sec.getSeconds();
       }
       
       nameShow();
@@ -77,10 +83,9 @@
     <h2>The Element Antimony!</h2>
     
     <h2 id="nameDisp">Welcome</h2>
-    <p>Put your name here!</p>
     <input type="text" id="nameInput" placeholder="Your name here!">
     
-    <br><br>
+    <p id="time"></p>
     
     <img id="shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Antimony-4.jpg/220px-Antimony-4.jpg" width="200" height="200" alt="A picture of the element Antimony">
     
